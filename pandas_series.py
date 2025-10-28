@@ -14,3 +14,12 @@ series = pd.Series(data, index=["a", "b", "c"])
 # 1   102
 # 2   104
 print(series)
+
+# access specific data values at a specified index
+print(series.loc["a"])
+print(series.loc["b"])
+print(series.loc["c"])
+
+# we can also change the data value at a specific index
+series.loc["c"] = 200
+print(series)
