@@ -16,9 +16,14 @@ series = pd.Series(data, index=["a", "b", "c"])
 print(series)
 
 # access specific data values at a specified index
+# iloc = integer location
+# loc  = location by label
 print(series.loc["a"])
 print(series.loc["b"])
 print(series.loc["c"])
+print(series.iloc[0])
+print(series.iloc[1])
+print(series.iloc[2])
 
 # we can also change the data value at a specific index
 series.loc["c"] = 200
