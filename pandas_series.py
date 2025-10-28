@@ -37,5 +37,11 @@ print (series[series <= 200])
 calories = {"day 1": 1750, "day 2": 2100, "day 3": 1700}
 
 series_calories = pd.Series(calories)
+series_calories.loc["day 3"] += 500 # adds to day 3 calories
 
 print(series_calories)
+print(series_calories.loc["day 1"])
+print(series_calories.loc["day 2"])
+print(series_calories.loc["day 3"])
+print(series_calories[series_calories >= 2000])
+print(series_calories[series_calories <= 2000])
