@@ -3,11 +3,11 @@
 
 import pandas as pd
 
-data = [100.1, 102.2, 104.3]
+data = [100, 102, 104, 200, 202]
 
 # call series function, takes data and puts it into a single column spreadsheet
 # you can rename the indexes
-series = pd.Series(data, index=["a", "b", "c"])
+series = pd.Series(data, index=["a", "b", "c", "d", "e"])
 
 # when printed, prints numbers with indexes and datatype (64 bit integers, float, object, boolean, etc)
 # 0   100
@@ -28,3 +28,14 @@ print(series.iloc[2])
 # we can also change the data value at a specific index
 series.loc["c"] = 200
 print(series)
+
+# filtering values
+print (series[series >= 200])
+print (series[series <= 200])
+
+# create dictionary
+calories = {"day 1": 1750, "day 2": 2100, "day 3": 1700}
+
+series_calories = pd.Series(calories)
+
+print(series_calories)
