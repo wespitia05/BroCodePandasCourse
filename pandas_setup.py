@@ -6,3 +6,8 @@
 # data frame: two dimensional labeled grid/table
 
 # with pandas we can import, display, manipulate and export data
+# pythons microsoft excel (on steroids)
+
+import pandas as pd
+
+print(pd.__version__)
