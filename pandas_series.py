@@ -3,12 +3,13 @@
 
 import pandas as pd
 
-data = [100, 102, 104]
+data = [100.1, 102.2, 104.3]
 
 # call series function, takes data and puts it into a single column spreadsheet
-series = pd.Series(data)
+# you can rename the indexes
+series = pd.Series(data, index=["a", "b", "c"])
 
-# when printed, prints numbers with indexes and datatype (64 bit integers)
+# when printed, prints numbers with indexes and datatype (64 bit integers, float, object, boolean, etc)
 # 0   100
 # 1   102
 # 2   104
