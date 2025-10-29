@@ -24,3 +24,14 @@ print("ILOC PROPERTY")
 print(df.iloc[0])
 print(df.iloc[1])
 print(df.iloc[2])
+
+# adding a new column to our data (has to match same number of values in data)
+df["Job"] = ["Frycook", "N/A", "Cashier"]
+print(df)
+
+# adding new rows to our data, easiest way is to create new dataframe then concatenate it
+new_row = pd.DataFrame([{"Name": "Sandy", "Age": 28, "Job": "Engineer"}, 
+                        {"Name": "Eugene", "Age": 56, "Job": "Manager"}])
+# call the concat property, parameters is your dataframe and the new row you want to add
+df = pd.concat([df, new_row])
+print(df)
