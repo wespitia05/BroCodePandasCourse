@@ -31,7 +31,8 @@ print(df)
 
 # adding new rows to our data, easiest way is to create new dataframe then concatenate it
 new_row = pd.DataFrame([{"Name": "Sandy", "Age": 28, "Job": "Engineer"}, 
-                        {"Name": "Eugene", "Age": 56, "Job": "Manager"}])
+                        {"Name": "Eugene", "Age": 56, "Job": "Manager"}],
+                        index=["Employee 4", "Employee 5"])
 # call the concat property, parameters is your dataframe and the new row you want to add
 df = pd.concat([df, new_row])
 print(df)
