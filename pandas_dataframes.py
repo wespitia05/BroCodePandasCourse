@@ -8,7 +8,7 @@ data = {
     "Name": ["Spongebob", "Patrick", "Squidward"],
     "Age": [30, 35, 50]
     }
-# calls pandas to convert into a dataframe
-df = pd.DataFrame(data)
+# calls pandas to convert into a dataframe and change label for our indexes
+df = pd.DataFrame(data, index=["Employee 1", "Employee 2", "Employee 3"])
 # prints our datafram
 print(df)
