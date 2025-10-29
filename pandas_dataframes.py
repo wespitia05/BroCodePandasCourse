@@ -10,5 +10,10 @@ data = {
     }
 # calls pandas to convert into a dataframe and change label for our indexes
 df = pd.DataFrame(data, index=["Employee 1", "Employee 2", "Employee 3"])
-# prints our datafram
+# prints our dataframe
 print(df)
+
+# using loc to locate our data value by label, prints it and the datatype
+print(df.loc["Employee 1"])
+print(df.loc["Employee 2"])
+print(df.loc["Employee 3"])
