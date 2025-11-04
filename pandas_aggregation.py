@@ -17,3 +17,15 @@ print(df.min(numeric_only=True))
 print(df.max(numeric_only=True))
 # tells pandas to count the number of numeric values from each column
 print(df.count(numeric_only=True))
+
+# SINGLE COLUMN
+# tells pandas to find the mean of the height column only
+print(df["Height"].mean())
+# tells pandas to find the sum of the height column only
+print(df["Height"].sum())
+# tells pandas to find the minimum value from the height column only
+print(df["Height"].min())
+# tells pandas to find the maximum value from the height column only
+print(df["Height"].max())
+# tells pandas to count the number of values from the height column only
+print(df["Height"].count())
