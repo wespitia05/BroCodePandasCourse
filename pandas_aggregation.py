@@ -29,3 +29,13 @@ print(df["Height"].min())
 print(df["Height"].max())
 # tells pandas to count the number of values from the height column only
 print(df["Height"].count())
+
+# GROUPBY FUNCTION
+# groups by Type1
+group = df.groupby("Type1")
+
+print(group["Height"].mean())
+print(group["Height"].sum())
+print(group["Height"].min())
+print(group["Height"].max())
+print(group["Height"].count())
