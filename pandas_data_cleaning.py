@@ -26,6 +26,9 @@ df = pd.read_csv("data.csv")
 
 # 5. fix data types
 # changes legendary data type to boolean rather than 0 or 1
-df["Legendary"] = df["Legendary"].astype(bool)
+# df["Legendary"] = df["Legendary"].astype(bool)
+
+# 6. remove duplicate values
+df = df.drop_duplicates()
 
 print(df.to_string())
