@@ -22,6 +22,10 @@ df = pd.read_csv("data.csv")
 
 # 4. standardize text
 # makes all names lowercase
-df["Name"] = df["Name"].str.lower()
+# df["Name"] = df["Name"].str.lower()
+
+# 5. fix data types
+# changes legendary data type to boolean rather than 0 or 1
+df["Legendary"] = df["Legendary"].astype(bool)
 
 print(df.to_string())
