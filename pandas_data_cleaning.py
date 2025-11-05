@@ -16,8 +16,12 @@ df = pd.read_csv("data.csv")
 
 # 3. fix inconsistent values
 # changes any value of Grass with GRASS, Fire with FIRE and Water with WATER
-df["Type1"] = df["Type1"].replace({"Grass": "GRASS",
-                                   "Fire": "FIRE",
-                                   "Water": "WATER"})
+# df["Type1"] = df["Type1"].replace({"Grass": "GRASS",
+#                                    "Fire": "FIRE",
+#                                    "Water": "WATER"})
+
+# 4. standardize text
+# makes all names lowercase
+df["Name"] = df["Name"].str.lower()
 
 print(df.to_string())
