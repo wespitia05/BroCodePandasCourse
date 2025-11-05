@@ -7,6 +7,9 @@ import pandas as pd
 df = pd.read_csv("data.csv")
 
 # 1. drop irrelevant columns
-df = df.drop(columns=["Legendary"])
+# df = df.drop(columns=["Legendary", "No"])
 
-print(df)
+# 2. handle missing data, removes any rows with Nan (no data available)
+df = df.dropna(subset=["Type2"])
+
+print(df.to_string())
