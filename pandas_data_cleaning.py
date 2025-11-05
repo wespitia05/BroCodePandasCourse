@@ -12,6 +12,12 @@ df = pd.read_csv("data.csv")
 # 2. handle missing data, removes any rows with Nan (no data available)
 # df = df.dropna(subset=["Type2"])
 # fills any not available value with "None"
-df = df.fillna({"Type2": "None"})
+# df = df.fillna({"Type2": "None"})
+
+# 3. fix inconsistent values
+# changes any value of Grass with GRASS, Fire with FIRE and Water with WATER
+df["Type1"] = df["Type1"].replace({"Grass": "GRASS",
+                                   "Fire": "FIRE",
+                                   "Water": "WATER"})
 
 print(df.to_string())
