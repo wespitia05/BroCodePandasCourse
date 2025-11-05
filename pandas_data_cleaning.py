@@ -10,6 +10,8 @@ df = pd.read_csv("data.csv")
 # df = df.drop(columns=["Legendary", "No"])
 
 # 2. handle missing data, removes any rows with Nan (no data available)
-df = df.dropna(subset=["Type2"])
+# df = df.dropna(subset=["Type2"])
+# fills any not available value with "None"
+df = df.fillna({"Type2": "None"})
 
 print(df.to_string())
